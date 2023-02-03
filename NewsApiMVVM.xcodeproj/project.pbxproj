@@ -26,6 +26,7 @@
 		15989869298C061F00359983 /* NewsSourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15989868298C061F00359983 /* NewsSourceCell.swift */; };
 		1598986C298C073800359983 /* NewsListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1598986B298C073800359983 /* NewsListScreen.swift */; };
 		1598986E298C075300359983 /* NewsArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1598986D298C075300359983 /* NewsArticleCell.swift */; };
+		15F22077298CECDF00809DD6 /* WebService2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F22076298CECDF00809DD6 /* WebService2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		15989868298C061F00359983 /* NewsSourceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSourceCell.swift; sourceTree = "<group>"; };
 		1598986B298C073800359983 /* NewsListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListScreen.swift; sourceTree = "<group>"; };
 		1598986D298C075300359983 /* NewsArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleCell.swift; sourceTree = "<group>"; };
+		15F22076298CECDF00809DD6 /* WebService2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				1598985B298BFE8A00359983 /* WebService.swift */,
+				15F22076298CECDF00809DD6 /* WebService2.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				15989856298BFC5F00359983 /* Constants.swift in Sources */,
 				1598983B298BF6AE00359983 /* NewsApiMVVMApp.swift in Sources */,
 				15989869298C061F00359983 /* NewsSourceCell.swift in Sources */,
+				15F22077298CECDF00809DD6 /* WebService2.swift in Sources */,
 				1598985A298BFE6000359983 /* NetworkError.swift in Sources */,
 				15989854298BFC4500359983 /* NewsSource.swift in Sources */,
 				1598985C298BFE8A00359983 /* WebService.swift in Sources */,

@@ -15,17 +15,22 @@ struct NewsListScreen: View {
 
     var body: some View {
         
-        NavigationView {
         
         List(newsArticleListViewModel.newsArticles, id: \.id) { newsArticle in
                 NewsArticleCell(newsArticle: newsArticle)
         }
         .listStyle(.plain)
-        .onAppear {
-            newsArticleListViewModel.getNewsBy(sourceId: newsSource.id)
+//        .onAppear {
+//            newsArticleListViewModel.getNewsBy(sourceId: newsSource.id)
+//        }
+//        .task {
+//            await newsArticleListViewModel.getNewsAsyncBy(sourceId: newsSource.id)
+//        }
+        .task {
+            await newsArticleListViewModel.getNewsAsyncBy3rdParty(sourceId: newsSource.id)
         }
         .navigationTitle(newsSource.name)
-        }
+        
     }
 }
 

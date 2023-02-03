@@ -24,6 +24,6 @@ struct NewsArticleViewModel {
     }
     
     var urlToImage: URL? {
-        URL(string: newsArticle.urlToImage ?? "")
+        URL(string: newsArticle.urlToImage ?? Constants.Urls.imagePlaceholder)
     }
 }

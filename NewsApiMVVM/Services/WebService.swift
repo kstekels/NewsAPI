@@ -35,7 +35,7 @@ class WebService: WebServiceProtocol {
         }.resume()
     }
     
-    func fetchNews(by sourceId: String, url: URL?, completion: @escaping (Result<[NewsArticle], NetworkError>) -> Void) {
+    internal func fetchNews(by sourceId: String, url: URL?, completion: @escaping (Result<[NewsArticle], NetworkError>) -> Void) {
         
         guard let url = url else {
             completion(.failure(.badUrl))
@@ -54,5 +54,22 @@ class WebService: WebServiceProtocol {
         }.resume()
         
     }
+    
+    
+    // ---
+    // This function is only if fetchNews has like 3rd party library and we do not have access to it
+    func fetchNewsAsync(sourceId: String, url: URL?) async throws -> [NewsArticle] {
+        try await withCheckedThrowingContinuation { continuation in
+            fetchNews(by: sourceId, url: url) { result in
+                switch result {
+                    case .success(let newsArticles):
+                        continuation.resume(returning: newsArticles)
+                    case .failure(let error):
+                        continuation.resume(throwing: error)
+                }
+            }
+        }
+    }
+    // ---
     
 }

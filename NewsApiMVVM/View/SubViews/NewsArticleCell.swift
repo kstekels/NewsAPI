@@ -26,6 +26,8 @@ struct NewsArticleCell: View {
                     .fontWeight(.bold)
                 Text(newsArticle.description)
             }
+        }.onAppear {
+            print(newsArticle)
         }
     }
 }
